@@ -63,7 +63,7 @@ weather-app/
 
 1. Clone or download this repository.
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/RoaringRoyel/js-fun-projects/tree/main/weather-app
    ```
 2. Open `script.js` and replace the `apikey` value with your own OpenWeatherMap API key.
    ```js

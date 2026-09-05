@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b0d0f;
+    color: #f2f2ed;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    min-height: 78vh;
+    border-bottom: 1px solid #272a2d;
+    padding: 0 7vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid #272a2d;
+    border-radius: 50%;
+    right: -150px;
+    top: 120px;
+}
+
+.hero::after {
+    content: "JS";
+    position: absolute;
+    right: 8vw;
+    bottom: -70px;
+    font-size: clamp(180px, 28vw, 420px);
+    font-weight: 700;
+    line-height: 1;
+    color: #15181b;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-family: "DM Mono", monospace;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #b9ff66;
+}
+
+.github-link {
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+    border: 1px solid #34383c;
+    padding: 10px 15px;
+    transition: 0.2s ease;
+}
+
+.github-link:hover {
+    border-color: #b9ff66;
+    color: #b9ff66;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    padding-top: 12vh;
+}
+
+.eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    color: #8d9499;
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: clamp(4rem, 9vw, 8.5rem);
+    line-height: 0.88;
+    letter-spacing: -6px;
+    font-weight: 700;
+}
+
+h1 span {
+    color: #b9ff66;
+}
+
+.intro {
+    max-width: 510px;
+    margin-top: 35px;
+    color: #a8adb1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 20px;
+    background: #b9ff66;
+    color: #0b0d0f;
+    font-family: "DM Mono", monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.explore-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* PROJECTS */
+.projects-section {
+    padding: 100px 7vw;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 1px solid #272a2d;
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    letter-spacing: -2px;
+}
+
+.project-count {
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    color: #777d82;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    min-height: 360px;
+    border: 1px solid #292d30;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #101315;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #b9ff66;
+}
+
+.project-icon {
+    font-size: 2.5rem;
+}
+
+.project-number {
+    font-family: "DM Mono", monospace;
+    color: #b9ff66;
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+}
+
+.project-info h3 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.project-info > p:not(.project-number) {
+    color: #90979c;
+    line-height: 1.6;
+    max-width: 480px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 22px 0;
+}
+
+.tags span {
+    border: 1px solid #34383c;
+    padding: 6px 9px;
+    font-family: "DM Mono", monospace;
+    font-size: 0.65rem;
+    color: #9ba1a5;
+}
+
+.project-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #292d30;
+    padding-top: 17px;
+    font-family: "DM Mono", monospace;
+    font-size: 0.75rem;
+}
+
+.project-link span {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.project-link:hover {
+    color: #b9ff66;
+}
+
+.project-link:hover span {
+    transform: translateX(5px);
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid #272a2d;
+    padding: 30px 7vw;
+    display: flex;
+    justify-content: space-between;
+    color: #666d72;
+    font-family: "DM Mono", monospace;
+    font-size: 0.68rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .hero {
+        min-height: 85vh;
+        padding: 0 6vw;
+    }
+
+    .hero-content {
+        padding-top: 10vh;
+    }
+
+    h1 {
+        font-size: clamp(3.5rem, 18vw, 6rem);
+        letter-spacing: -4px;
+    }
+
+    .projects-section {
+        padding: 70px 6vw;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 25px 6vw;
+        gap: 15px;
+        flex-direction: column;
+    }
+}
