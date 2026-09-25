@@ -2,6 +2,8 @@
 
 A collection of small JavaScript projects and experiments.
 
+Live Link: https://js-fun-projects-navy.vercel.app/
+
 ## Structure
 
 Each project lives in its own folder:
